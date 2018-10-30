@@ -1,0 +1,22 @@
+{% extends 'gallery/base.html'%}
+{% block content %}
+<div class="container-fluid">
+<div class="row">
+{% for image in gallery_upload_object_list%}
+    <div class="col-sm-4">
+      <div class="thumbnail">
+          <img src="{{ image.upload_image.url }}" alt="Lights" style="max-width:100%;">
+          <div class="caption">
+            <p>{{ image.upload_image_title }}</p>
+          </div>
+      </div>
+    </div>
+
+
+
+
+
+{% endfor %}
+</div>
+</div>
+{% endblock content%}

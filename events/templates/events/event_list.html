@@ -1,0 +1,18 @@
+{% extends 'gallery/base.html' %}
+
+{% block content %}
+<div class='container-fluid'>
+{% for event in events %}
+<div class='row' style='margin:20px; border:2px solid green; padding:5px;'>
+<div class='col-md-4'>
+  <img class='img-fluid thumbnail' src="{{event.image.url }}" alt="image">
+</div>
+<div class='col-md-8'>
+<h4>{{ event.title }}</h4>
+<small>{{event.time}}</small>
+<p>{{event.description}}</p>
+</div>
+</div>
+{% endfor %}
+</div>
+{% endblock content %}

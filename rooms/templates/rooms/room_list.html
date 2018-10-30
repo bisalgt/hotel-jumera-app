@@ -1,0 +1,18 @@
+{% extends 'gallery/base.html' %}
+
+{% block content %}
+<div class='container-fluid'>
+{% for room in room_list %}
+<div class='row' style='margin:20px; border:2px solid green; padding:5px;'>
+<div class='col-md-4'>
+  <img class='img-fluid thumbnail' src="{{room.room_image.url }}" alt="image">
+</div>
+<div class='col-md-8'>
+<h4>{{ room.room_name }}</h4>
+<p>{{room.room_about}}</p>
+<p>{{room.room_bedroom}} {{ room.room_tv }} {{ room.room_ac }}{{ room.room_wifi }}{{ room.room_bathroom }}</p>
+</div>
+</div>
+{% endfor %}
+</div>
+{% endblock content %}

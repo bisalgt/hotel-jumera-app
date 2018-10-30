@@ -1,0 +1,16 @@
+{% extends 'gallery/base.html' %}
+
+{% block content %}
+<div class='container-fluid'>
+{% for about_variables in about %}
+<div class='row' style='margin:20px; border:2px solid green; padding:5px;'>
+<div class='col-md-12'>
+  <img class='img-fluid thumbnail' src="{{about_variables.image.url }}" alt="image">
+</div>
+<div class='col-md-8'>
+<p>{{ about_variables.about }}</p>
+</div>
+</div>
+{% endfor %}
+</div>
+{% endblock content %}
