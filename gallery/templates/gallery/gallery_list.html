@@ -10,7 +10,7 @@
   <div class="carousel-inner">
     {% for gallery_object in gallery_object_list|slice:"0:1" %}
       <div class="carousel-item active">
-        <img src="{{ gallery_object.gallery_image.url }}" alt="{{ gallery_object.gallery_image_title }}" >
+        <img  class="img-responsive" src="{{ gallery_object.gallery_image.url }}" alt="{{ gallery_object.gallery_image_title }}" >
         <div class="carousel-caption">
           <h3>{{ gallery_object.gallery_image_title }}</h3>
           <p>We had such a great time in LA!</p>
@@ -20,7 +20,7 @@
 
     {% for gallery_object in gallery_object_list|slice:"1:3" %}
     <div class="carousel-item">
-      <img src="{{ gallery_object.gallery_image.url }}" alt="{{ gallery_object.gallery_image_title }}" >
+      <img  class="img-responsive"  src="{{ gallery_object.gallery_image.url }}" alt="{{ gallery_object.gallery_image_title }}" >
       <div class="carousel-caption">
         <h3>{{ gallery_object.gallery_image_title }}</h3>
         <p>Thank you, Chicago!</p>
@@ -40,21 +40,23 @@
 
 {% for gallery_object in gallery_object_list|slice:"3:" %}
 <div class="container-fluid" style="margin: 10px 0px;">
-<div class="row">
-<div class="col-sm-6">
-  <h2>Image Gallery</h2>
-  <p>The .thumbnail class can be used to display an image gallery.</p>
-  <p>The .caption class adds proper padding and a dark grey color to text inside thumbnails.</p>
-  <p>Click on the images to enlarge them.</p>
-</div>
+<di class="row no-gutters" style='border:1px solid rgb(100,100,100);padding:10px;margin:20px;'>
+
     <div class="col-sm-6">
-      <div class="thumbnail">
+      <div class="img-thumbnail rounded">
           <img src="{{ gallery_object.gallery_image.url }}" style="width:100%">
-          <div class="caption">
+          <div class="caption text-center">
             <p>{{ gallery_object.gallery_image_title }}</p>
         </div>
       </div>
     </div>
+    <div class="col-sm-6 text-justify" style='padding:10px;'>
+      <h2>Image Gallery</h2>
+      <p>The .thumbnail class can be used to display an image gallery.</p>
+      <p>The .caption class adds proper padding and a dark grey color to text inside thumbnails.</p>
+      <p>Click on the images to enlarge them.</p>
+    </div>
+</div>
 </div>
 {% endfor %}
 {% endblock content %}

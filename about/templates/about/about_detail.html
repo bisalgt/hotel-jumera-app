@@ -1,16 +1,20 @@
 {% extends 'gallery/base.html' %}
 
 {% block content %}
-<div class='container-fluid'>
+<div class='container-fluid '>
 {% for about_variables in about %}
-<div class='row' style='margin:20px; border:2px solid green; padding:5px;'>
+<div class='row no-gutters' style='margin:1px; border:2px solid green; padding:5px;'>
 <div class='col-md-12'>
-  <img class='img-fluid thumbnail' src="{{about_variables.image.url }}" alt="image">
-</div>
-<div class='col-md-8'>
-<p>{{ about_variables.about }}</p>
+  <img class='img-fluid rounded' src="{{about_variables.image.url }}" alt="image">
 </div>
 </div>
+ <div class='container '>
+   <div class='text-center text-capitalize'>
+   <h4>{{about_variables.about}}</h4>
+  </div>
+  </div>
 {% endfor %}
+<br><hr>
+<iframe width="100%" height= '500px' src="https://maps.tilehosting.com/styles/basic/?key=VEZIoBrAg2L6w27pMMxQ#16.95/27.60152/84.64242"></iframe>
 </div>
 {% endblock content %}

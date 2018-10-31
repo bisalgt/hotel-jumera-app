@@ -1,16 +1,18 @@
 {% extends 'gallery/base.html' %}
 
 {% block content %}
-<div class='container-fluid'>
+<div class='container-fluid' >
+  <div class='row no-gutters'style='margin: auto -10px;'>
 {% for service in services %}
-<div class='row' style='margin:20px; border:2px solid green; padding:5px;'>
-<div class='col-md-12'>
-  <img class='img-fluid thumbnail' src="{{service.image.url }}" alt="image">
+
+<div class='col-md-6 services_container'>
+  <img class='img-fluid ' src="{{service.image.url }}" alt="image">
+  <div class='services_content'>
+    <h6>{{ service.title }}</h6>
+    <p>{{service.description}} </p>
+  </div>
 </div>
-<div class='col-md-8'>
-<p>{{ service.description }}</p>
-</div>
-</div>
+
 {% endfor %}
-</div>
+</div></div>
 {% endblock content %}

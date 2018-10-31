@@ -3,14 +3,26 @@
 {% block content %}
 <div class='container-fluid'>
 {% for room in room_list %}
-<div class='row' style='margin:20px; border:2px solid green; padding:5px;'>
+<div class='row no-gutters' style=' border:1px solid rgb(100,100,100); margin:20px 0px;'>
 <div class='col-md-4'>
-  <img class='img-fluid thumbnail' src="{{room.room_image.url }}" alt="image">
+  <div class='img-thumbnail'style='margin:5px;'>
+  <img class='img-fluid' src="{{room.room_image.url }}" alt="image">
 </div>
-<div class='col-md-8'>
+</div>
+<div class='col-md-8' style='padding:15px;'>
 <h4>{{ room.room_name }}</h4>
 <p>{{room.room_about}}</p>
-<p>{{room.room_bedroom}} {{ room.room_tv }} {{ room.room_ac }}{{ room.room_wifi }}{{ room.room_bathroom }}</p>
+<div class='row'>
+  <div class='col-md-6'>
+<p><i class="fa fa-bed " style="font-size:24px; border:1px solid rgb(100,100,100);padding:8px;"></i>  <span class='badge badge-info'>  {{room.room_bedroom}} Bed</span></p><p> <i class="fa fa-television" style="font-size:24px; border:1px solid rgb(100,100,100);padding:8px;"></i>  <span class='badge badge-info'> {{ room.room_tv }}</span></p>
+  <p><i class="fa fa-wifi" style="font-size:24px; border:1px solid rgb(100,100,100);padding:8px;"></i>  <span class='badge badge-info'>  {{room.room_wifi}}</span></p>
+</div>
+<div class='col-md-6'>
+  <p> A/C :  <span class='badge badge-info'>{{ room.room_ac }}</span></p>
+  <p> WARDROBE :  <span class='badge badge-info'> AVAILABLE </span></p>
+  <p> RESTROOM :  <span class='badge badge-info'>{{ room.room_bathroom }}</span></p>
+</div>
+</div>
 </div>
 </div>
 {% endfor %}
