@@ -5,3 +5,6 @@ class Contact(models.Model):
     email = models.EmailField()
     phone_number = models.PositiveIntegerField()
     message = models.TextField()
+
+    def __Str__(self):
+        return self.name

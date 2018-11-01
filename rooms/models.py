@@ -1,5 +1,7 @@
 from django.db import models
 from django.urls import reverse
+from PIL import Image
+
 
 class RoomDetail(models.Model):
     room_image = models.ImageField(upload_to='rooms_pics')
@@ -21,3 +23,11 @@ class RoomDetail(models.Model):
 
     def get_absolute_url(self):
         return reverse('room_list')
+
+    def save(self):
+        super().save()
+        img = Image.open(self.room_image.path)
+        if img.height!=768 or img.width!=1366:
+            output_size = (1366,768)
+            img.thumbnail(output_size)
+            img.save(self.room_image.path)

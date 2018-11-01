@@ -13,12 +13,15 @@
 <h4>{{ room.room_name }}</h4>
 <p>{{room.room_about}}</p>
 <div class='row'>
-  <div class='col-md-6'>
-<p><i class="fa fa-bed " style="font-size:24px; border:1px solid rgb(100,100,100);padding:8px;"></i>  <span class='badge badge-info'>  {{room.room_bedroom}} Bed</span></p><p> <i class="fa fa-television" style="font-size:24px; border:1px solid rgb(100,100,100);padding:8px;"></i>  <span class='badge badge-info'> {{ room.room_tv }}</span></p>
-  <p><i class="fa fa-wifi" style="font-size:24px; border:1px solid rgb(100,100,100);padding:8px;"></i>  <span class='badge badge-info'>  {{room.room_wifi}}</span></p>
+  <div class='col-md-4'>
+<p><i class="fa fa-bed " style="font-size:24px; border:1px solid rgb(100,100,100);padding:8px;"></i>  <span class='badge badge-info'>  {{room.room_bedroom}} Bed</span></p>
+<p> <i class="fa fa-television" style="font-size:24px; border:1px solid rgb(100,100,100);padding:8px;"></i>  <span class='badge badge-info'> {{ room.room_tv }}</span></p>
 </div>
-<div class='col-md-6'>
+<div class='col-md-4'>
+  <p><i class="fa fa-wifi" style="font-size:24px; border:1px solid rgb(100,100,100);padding:8px;"></i>  <span class='badge badge-info'>  {{room.room_wifi}}</span></p>
   <p> A/C :  <span class='badge badge-info'>{{ room.room_ac }}</span></p>
+</div>
+<div class='col-md-4'>
   <p> WARDROBE :  <span class='badge badge-info'> AVAILABLE </span></p>
   <p> RESTROOM :  <span class='badge badge-info'>{{ room.room_bathroom }}</span></p>
 </div>

@@ -1,7 +1,10 @@
 {% extends 'gallery/base.html'%}
+{% load crispy_forms_tags %}
 {% block content%}
+<div class-'container' style = "max-width:100%; height:auto;padding:50px; ">
 <form method='post'>
   {% csrf_token %}
-  {{form.as_p}}
-  <input type="submit"  value="SEND">
+  {{form | crispy }}
+  <button type="submit" class="btn btn-success"> Send </button>
+  </div>
 {% endblock content%}
