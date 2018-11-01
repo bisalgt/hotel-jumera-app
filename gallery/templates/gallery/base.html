@@ -10,12 +10,30 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-	  /* Make the image fully responsive */
+  a:link {
+      color: red;
+  }
+
+  /* visited link */
+  a:visited {
+      color: green;
+  }
+
+  /* mouse over link */
+  a:hover {
+      color: hotpink;
+  }
+
+  /* selected link */
+  a:active {
+      color: blue;
+  }
+    /* Make the image fully responsive */
 	  .carousel-inner img {
 		  width: 100%;
 		  height: 100%;
 	  }
-  body{color:#00FF00;text-align: justify;}
+
   .services_container{
     positon:relative;
     margin: 20px 0px;
@@ -23,17 +41,27 @@
   }
   .services_container .services_content{
     position:absolute;
+    color:rgb(200,200,200);
     bottom:0px;
     background: rgba(0,0,0,0.5);
     width:100%;
     padding:20px;
   }
+  .nav_color{
+    color: rgb(50,50,50);
+    background-color: rgb(100,100,100)
+  }
+  .body_color{
+    background-color: rgba(200,200,200,0.5)
+  }
+
+
   </style>
   </head>
-<body class="bg-secondary">
+<body class="body_color">
 
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+<nav class="navbar navbar-expand-md nav_color navbar-light" >
   <a class="navbar-brand" href="{% url 'gallery_list' %}">Hotel Jumera</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -85,10 +113,10 @@
 {% block content %}
 {% endblock content %}
   <div class='container-fluid'>
-  <diV class="row bg-dark" style="padding:10px;">
+  <diV class="row bg-dark" style="margin-top:50px; padding:20px; color:rgb(255,255,255)">
   <diV class='col-md-4'>
-    <h2 style='text-style:italic;'>Company Logo</h2>
-    <ul class='list-inline' style="text-decoration:none; font-family:bold;">
+    <h2 >Company Logo</h2>
+    <ul class='list-inline' style="text-decoration:none; font-style: normal;">
       <li class='list-inline-item'><a href="#">Home.</a></li>
       <li class='list-inline-item'><a href="#">About.</a></li>
       <li class='list-inline-item'><a href="#">Contact.</a></li>
@@ -96,21 +124,26 @@
     </ul>
     </div>
   <div class='col-md-4'>
-    <p><i class="fa fa-map-marker">   Daduwa-07<strong>  Chitwan, Nepal</strong></i>
-      <p><i class="fa fa-phone"></i>  +977- 056583477</p>
-      <p><i class="fa fa-envelope"></i>  company@gmail.com</p>
+    <p><i class="fa fa-map-marker">  </i>  Daduwa-07, <strong>  Chitwan, Nepal</strong>
+      <p><i class="fa fa-phone">  </i>   +977- 056583477</p>
+      <p><i class="fa fa-envelope">  </i>   company@gmail.com</p>
   </div>
   <div class='col-md-4'>
     <h4><strong> About the company</strong></h4>
     <p> This is the place for you if you are wanting to spend some time on serene environment.</p>
       <p>you are welcome</p>
-      <ul class="list-inline">
+      <ul class="list-inline" style="font-size:30px;">
         <li class='list-inline-item'><i class="fa fa-facebook-square"></i></li>
         <li  class='list-inline-item'><i class="fa fa-google-plus-square"></i></li>
         <li  class='list-inline-item'><i class="fa fa-youtube-square"></i></li>
       </ul>
   </div>
- </div>
+  <div class="col-12 text-center">
+    <hr style="width:100%; background-color:rgba(100,100,100,0.7); margin:auto; display: block;">
+    <small>  Designed By Bishal G. </small>
+  </div>
 </div>
+</div>
+
 </body>
 </html>

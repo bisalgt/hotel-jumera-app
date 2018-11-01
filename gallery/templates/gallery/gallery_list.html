@@ -1,7 +1,7 @@
 {% extends 'gallery/base.html' %}
 
 {% block content %}
-<div id="demo" class="carousel slide" data-ride="carousel">
+<div id="demo" class="carousel slide" data-ride="carousel" style="margin:5px 5px 10px 5px;">
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
     <li data-target="#demo" data-slide-to="1"></li>
@@ -39,10 +39,10 @@
 </div>
 
 {% for gallery_object in gallery_object_list|slice:"3:" %}
-<div class="container-fluid" style="margin: 10px 0px;">
-<di class="row no-gutters" style='border:1px solid rgb(100,100,100);padding:10px;margin:20px;'>
+<div class="container-fluid" style="margin:50px 0px;">
+<di class="row no-gutters" style='border:1px solid rgba(100,100,100,0.3);padding:10px;margin:20px;'>
 
-    <div class="col-sm-6">
+    <div class="col-md-6">
       <div class="img-thumbnail rounded">
           <img src="{{ gallery_object.gallery_image.url }}" style="width:100%">
           <div class="caption text-center">
@@ -50,11 +50,12 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-6 text-justify" style='padding:10px;'>
-      <h2>Image Gallery</h2>
-      <p>The .thumbnail class can be used to display an image gallery.</p>
-      <p>The .caption class adds proper padding and a dark grey color to text inside thumbnails.</p>
-      <p>Click on the images to enlarge them.</p>
+    <div class="col-md-6 text-justify" style='padding:10px;'>
+      <h2>DJ Party</h2>
+      <p>This is the description, as you know it is so much awesome to have JD.
+        But what you dont know is its friging tasty when you have it with Coke.
+        Put 150 ml of JD into 250 ml of Coke,serve it With 3-4 Ice Cubes , you will carve the taste for the rest of your life.
+        </p>
     </div>
 </div>
 </div>
