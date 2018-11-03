@@ -1,7 +1,11 @@
 from django import forms
-from .models import Event
+from .models import PastEvent, FutureEvent
 
-class EventForm(forms.ModelForm):
+class FutureEventForm(forms.ModelForm):
     class Meta:
-        model = Event
+        model = FutureEvent
+        fields='__all__'
+class PastEventForm(forms.ModelForm):
+    class Meta:
+        model = PastEvent
         fields='__all__'

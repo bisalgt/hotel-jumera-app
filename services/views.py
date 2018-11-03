@@ -1,7 +1,10 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render,redirect, get_object_or_404
 from .forms import ServiceForm
 from .models import Service
 
+
+@login_required
 def service_create_form(request):
     if request.method=='POST':
         form = ServiceForm(request.POST, request.FILES)

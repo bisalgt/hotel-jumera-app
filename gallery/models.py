@@ -6,7 +6,7 @@ from PIL import Image
 class Gallery(models.Model):
     gallery_image_title = models.CharField(max_length=200)
     gallery_image = models.ImageField(upload_to='gallery_pics')
-
+    gallery_image_description = models.TextField(default="About the description of the image")
     def __str__(self):
         return self.gallery_image_title
 

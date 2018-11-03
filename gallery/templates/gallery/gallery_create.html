@@ -1,7 +1,9 @@
 {% extends 'gallery/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class='container' style = "max-width:100%; height:auto;padding:50px;">
+<div class='container gallery_create_container'>
+  <small class="gallery_create_suggest">The Width and Height of Image <strong> MUST </strong>be 1366px-by-768px for efficient view. </small>
+  <small class="gallery_create_suggest"> <strong> First THREE </strong>images will be shown at slide show, remaining images from 4th to seventh will be shown at the body,The final one will be shown at the navigation bar </small>
 <form method='POST' enctype="multipart/form-data">
 {% csrf_token %}
 {{ form |crispy }}

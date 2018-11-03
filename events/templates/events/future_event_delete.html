@@ -1,0 +1,13 @@
+{% extends 'gallery/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h3>Delete Old Events</h3>
+<div class='container event_delete_container'>
+<form method='POST' enctype="multipart/form-data">
+{% csrf_token %}
+{{ form |crispy }}
+<small style="color:red;background-color:yellow;">Are you sure you want to <strong>  delete?</strong></small>
+<br><button type="submit" class="btn btn-success">Delete Old Event!</button>
+</form>
+</div>
+{% endblock content %}

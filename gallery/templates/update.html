@@ -1,0 +1,35 @@
+{% extends 'gallery/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class='container update_style'>
+<br><br>
+  <h4> To Update Home page </h4>
+    <p>Click the bottom below to upload to homepage</p>
+<a href="{% url 'gallery_create'%}"><button type="submit" class="btn btn-success">Upload Homepage</button></a>
+<br><br>
+<h4> To Update About page </h4>
+  <p>Click the bottom below to update Aboutpage</p>
+<a href="{% url 'about_create'%}"><button type="submit" class="btn btn-success">Update Aboutpage</button></a>
+<br><br>
+<h4> To Create New Room</h4>
+  <p>Click the bottom below to Create Room</p>
+<a href="{% url 'room_create'%}"><button type="submit" class="btn btn-success">Create Room</button></a>
+<br><br>
+<h4> To Update the services </h4>
+  <p>Click the bottom below to update Services</p>
+<a href="{% url 'service_create'%}"><button type="submit" class="btn btn-success">Create New Services</button></a>
+<br><br>
+<h4> To Upload Photos to Gallery</h4>
+  <p>Click the bottom below to upload photos</p>
+<a href="{% url 'gallery_create'%}"><button type="submit" class="btn btn-success">Upload Photos</button></a>
+<br><br>
+<h4> FutureEvent Edit </h4>
+  <p>Click the bottom below to create new Future Events</p>
+<a href="{% url 'future_event_create'%}"><button type="submit" class="btn btn-success">Create Future Event</button></a>
+<br><br>
+<h4> Past Event Edit </h4>
+  <p>Click the bottom below to upload a Past Event</p>
+<a href="{% url 'past_event_create'%}"><button type="submit" class="btn btn-success">Add Past Event</button></a>
+<br><br>
+</div>
+{% endblock content %}

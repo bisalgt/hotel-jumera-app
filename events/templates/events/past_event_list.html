@@ -1,0 +1,23 @@
+{% extends 'gallery/base.html' %}
+
+{% block content %}
+<div class='container-fluid text-center event_list_container'>
+  <h3>Past Events </h3>
+  <hr>
+{% for event in events%}
+<div class='row no-gutters event_list_row'>
+<div class='col-md-6'>
+  <img class='img-fluid thumbnail' src="{{event.image.url }}" alt="image">
+</div>
+<div class='col-md-6 event_list_col'>
+<h4><strong>{{ event.title }} </strong></h4>
+<p><strong> Time : </strong><small>{{event.time}}</small></p>
+<p>{{event.description}}</p>
+{%if user.is_authenticated %}
+<a href="{% url 'past_event_delete' event.id %}"><input type="submit" value="Delete Event"></a>
+{% endif %}
+</div>
+</div>
+{% endfor %}
+</div>
+{% endblock content %}

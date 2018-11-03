@@ -1,0 +1,274 @@
+.gallery_list_carousel{
+margin:5px 5px 10px 5px;
+}
+.gallery_list_carousel_button{
+margin:15px auto;
+}
+.gallery_list_atithi{
+  font-size:50px;
+  background-color:rgba(200,200,200,0.5);
+}
+
+.gallery_list_body{
+   margin:20px auto;
+   background-size:cover;
+   color:white;
+   height:auto;
+   background-attachment:fixed;
+   background-position:center;
+   background-repeat:no-repeat;
+}
+
+.gallery_list_body_row{
+   padding:10px;
+   margin:10px;
+}
+.gallery_list_body_title{
+   font-size:20px;
+   margin:10px;
+   padding:250px 20px 10px 20px;
+}
+.gallery_list_body_descri{
+  margin:1px 20px;
+}
+.gallery_create_container{
+   max-width:100%;
+   height:auto;
+   padding:50px;
+}
+.gallery_create_suggest{
+color:red;
+background-color:yellow;
+}
+.gallery_upload_list_row{
+   margin:5px;
+}
+.gallery_upload_list_col{
+  margin:5px 0px;
+}
+.gallery_upload_list_title{
+  text-align:center;
+}
+.gallery_upload_create_container{
+  max-width:100%;
+  height:auto;
+  padding:50px;
+}
+.update_style{
+   max-width:100%;
+   height:auto;
+   padding:50px;
+}
+.login_style{
+  max-width:100%;
+  height:auto;
+  padding:50px;
+}
+
+.about_detail_row{
+   margin:25px 5px 15px 5px;
+   border:1px solid rgba(100,100,100,0.5);
+   padding:5px;
+}
+.about_detail_container{
+   margin-top:20px;
+}
+
+.about_detail_text{
+   background:rgba(200,200,200,0.3);
+   padding:10px;
+}
+
+.about_detail_map_container{
+   border:1px solid black;
+   margin: 20px;
+   padding:15px;
+   background:rgb(200,200,200);
+}
+.about_detail_map{
+  border:1px solid black;
+  width:100%;
+  height:270px;
+}
+.about_create_container{
+  max-width:100%;
+  height:auto;
+  padding:50px;
+}
+.about_create_warning{
+  color:red;
+  background-color:yellow;
+}
+
+.booking_create_container{
+  margin:5px;
+  padding:10px;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  position:relative;
+}
+
+.booking_create_contain{
+   background-color:rgba(0,0,0,0.5);
+   max-width:60%;
+   height:auto;
+   padding:40px 0px 40px 10px;
+   position:relative;
+   right:0px;
+   margin:10px;
+}
+.contact_us_container{
+  margin:5px;
+  padding:10px;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  position:relative;
+}
+.contact_us_contain{
+  max-width:60%;
+  background-color:rgba(0,0,0,0.3);
+  height:auto;
+  padding:40px 0px 40px 10px;
+  position:relative;
+  right:0px;
+  margin:10px;
+}
+.event_list_container{
+  margin:30px 5px 30px 5px;
+  border:1px solid rgba(150,150,150,0.3);
+  background-color:rgba(150,150,150,0.3);
+  padding:5px;
+}
+.event_list_row{
+   margin:30px 20px;
+   background-color:rgba(170,170,170,0.5);
+   padding:5px;
+}
+.event_list_col{
+  padding:15px;
+  margin-top:20px;
+}
+.event_create_container{
+   max-width:100%;
+   height:auto;
+   padding:50px;
+}
+
+.event_delete_container{
+   max-width:100%;
+   height:auto;
+   padding:50px;
+}
+.room_list_row{
+  border:1px solid rgba(100,100,100,0.2);
+  margin:20px 0px;
+  padding:10px;
+}
+.room_list_img{
+  margin:5px;
+}
+.room_list_col{
+   padding:15px;
+}
+.room_list_icon{
+   font-size:24px;
+   border:1px solid rgb(100,100,100);
+   padding:8px;
+}
+
+.service_list_row{
+  margin: 10px -10px;
+  padding:5px;
+}
+
+.service_create_container{
+   max-width:100%;
+   height:auto;
+   padding:50px;
+}
+
+.nav_image{
+    position:absolute;
+    z-index:2;
+    height:130px;
+    width:150px;
+    margin-left:5px;
+    padding:5px;
+  }
+  .nav_text{
+    margin:5px;
+    padding:5px;
+  }
+  .nav_style{
+     position:relative;
+     z-index:1;
+  }
+.footer_row{
+  margin-top:50px;
+  padding:20px;
+  color:rgb(255,255,255);
+}
+
+
+    /* Make the image fully responsive */
+	   .carousel-inner img {
+		  width: 100%;
+		  height: 100%;
+	  }
+
+  .services_container{
+    position:relative;
+    margin: 20px 0px;
+    border:1px solid rgb(100,100,100);
+  }
+  .services_container .services_content{
+    position:absolute;
+    color:rgb(200,200,200);
+    bottom:0px;
+    background: rgba(0,0,0,0.5);
+    width:100%;
+    padding:20px;
+  }
+  .nav_color{
+    color: rgb(50,50,50);
+    background-color: rgb(100,100,100);
+  }
+  .body_color{
+    background-color: rgba(200,200,200,0.5);
+  }
+.footer_ul{
+  text-decoration:none;
+  font-style: normal;
+}
+.footer_icon_map{
+  font-size: 24px;
+  color:rgb(200,40,40);
+}
+.footer_icon_phone{
+ font-size: 24px;
+ color:rgb(40,200,40);
+}
+.footer_icon_envelope{
+   font-size: 24px;
+   color:rgb(40,150,40);
+}
+.footer_icon_facebook{
+ color:rgb(4,4,255);
+  font-size: 30px;
+}
+.footer_icon_google{
+    font-size: 30px;
+    color:rgb(200,40,40);
+}
+.footer_icon_youtube{
+font-size: 30px;
+ color:rgb(255,40,40);
+}
+.footer_hr{
+   width:100%;
+   background-color:rgba(100,100,100,0.7);
+   margin:auto;
+   display: block;
+}

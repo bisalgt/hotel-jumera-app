@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_list_or_404
 from .forms import ContactForm
 from django.contrib import messages
 from django.core.mail import send_mail
+from gallery.models import Gallery
 
 
 def contact_create_form(request):
@@ -18,4 +19,6 @@ def contact_create_form(request):
             return redirect('gallery_list')
     else:
         form = ContactForm()
-    return render(request, 'contact/contact_us.html', {'form':form})
+    gallery_obj = get_list_or_404(Gallery)
+    context = {'form':form, 'gallery_obj':gallery_obj}
+    return render(request, 'contact/contact_us.html', context)

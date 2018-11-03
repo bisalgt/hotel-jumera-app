@@ -3,22 +3,23 @@
 {% block content %}
 <div class='container-fluid'>
 {% for room in room_list %}
-<div class='row no-gutters' style=' border:1px solid rgba(100,100,100,0.2); margin:20px 0px;padding:10px;'>
+<div class='row no-gutters room_list_row' >
 <div class='col-lg-4'>
-  <div class='img-thumbnail'style='margin:5px;'>
+  <div class='img-thumbnail room_list_img'>
   <img class='img-fluid' src="{{room.room_image.url }}" alt="image">
 </div>
 </div>
-<div class='col-lg-8' style='padding:15px;'>
-<h4>{{ room.room_name }}</h4>
+<div class='col-lg-8 room_list_col'>
+<div><h4>{{ room.room_name }}</h4><a href="{% url 'booking_create'%}"><button type="submit" class="btn btn-outline-success"> Book Now </button></a>
+ </div>
 <p>{{room.room_about}}</p>
 <div class='row'>
   <div class='col-lg-4'>
-<p><i class="fa fa-bed " style="font-size:24px; border:1px solid rgb(100,100,100);padding:8px;"></i> :  <span class='badge badge-secondary'> {{room.room_bedroom}} Bed</span></p>
-<p> <i class="fa fa-television" style="font-size:24px; border:1px solid rgb(100,100,100);padding:8px;"></i> :   <span class='badge badge-secondary'>{{ room.room_tv }}</span></p>
+<p><i class="fa fa-bed room_list_icon"></i> :  <span class='badge badge-secondary'> {{room.room_bedroom}} Bed</span></p>
+<p> <i class="fa fa-television room_list_icon"></i> :   <span class='badge badge-secondary'>{{ room.room_tv }}</span></p>
 </div>
 <div class='col-lg-4'>
-  <p><i class="fa fa-wifi" style="font-size:24px; border:1px solid rgb(100,100,100);padding:8px;"></i>  :  <span class='badge badge-secondary'>  {{room.room_wifi}}</span></p>
+  <p><i class="fa fa-wifi room_list_icon"></i>  :  <span class='badge badge-secondary'>  {{room.room_wifi}}</span></p>
   <p> A/C :  <span class='badge badge-secondary'>{{ room.room_ac }}</span></p>
 </div>
 <div class='col-lg-4'>

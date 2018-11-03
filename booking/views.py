@@ -2,8 +2,9 @@ from django.views.generic import CreateView
 from .forms import BookingForm
 from .models import Booking
 from django.core.mail import send_mail
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_list_or_404
 from django.contrib import messages
+from gallery.models import Gallery
 
 
 def register(request):
@@ -22,4 +23,6 @@ def register(request):
             return redirect('gallery_list')
     else:
         form = BookingForm()
-    return render(request,'booking/booking_create.html',{"form":form})
+    gallery_obj = get_list_or_404(Gallery)
+    context = {'form':form, 'gallery_obj':gallery_obj}
+    return render(request,'booking/booking_create.html',context)

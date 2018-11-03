@@ -1,7 +1,8 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Hotel Jumera</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -9,60 +10,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-  a:link {
-      color: red;
-  }
-
-  /* visited link */
-  a:visited {
-      color: green;
-  }
-
-  /* mouse over link */
-  a:hover {
-      color: hotpink;
-  }
-
-  /* selected link */
-  a:active {
-      color: blue;
-  }
-    /* Make the image fully responsive */
-	  .carousel-inner img {
-		  width: 100%;
-		  height: 100%;
-	  }
-
-  .services_container{
-    positon:relative;
-    margin: 20px 0px;
-    border:1px solid rgb(100,100,100);
-  }
-  .services_container .services_content{
-    position:absolute;
-    color:rgb(200,200,200);
-    bottom:0px;
-    background: rgba(0,0,0,0.5);
-    width:100%;
-    padding:20px;
-  }
-  .nav_color{
-    color: rgb(50,50,50);
-    background-color: rgb(100,100,100)
-  }
-  .body_color{
-    background-color: rgba(200,200,200,0.5)
-  }
-
-
-  </style>
+  <link href="{% static 'css/base.css' %}" rel="stylesheet">
   </head>
 <body class="body_color">
-
-
-<nav class="navbar navbar-expand-md nav_color navbar-light" >
-  <a class="navbar-brand" href="{% url 'gallery_list' %}">Hotel Jumera</a>
+    {% for gallery_object in gallery_object_list|slice:"7:8" %}
+    <a  href="{% url 'gallery_list'%}"><img class='nav_image'  src="{{ gallery_object.gallery_image.url }}" alt="{{ gallery_object.gallery_image_title }}"></a>
+    <p class='text-right nav_text' >अतिथिदेवो भव:</p>
+  {% endfor %}
+<nav class="navbar  nav_style navbar-expand-md nav_color navbar-light">
+<a class="navbar-brand" href="{% url 'gallery_list'%}"> Hotel Jumera</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -75,7 +31,7 @@
         <a class="nav-link" href="{% url 'about_detail'%}">About Us</a>
       </li>
 	   <li class="nav-item">
-        <a class="nav-link" href="{% url 'room_list'%}">Room</a>
+        <a class="nav-link" href="{% url 'room_list'%}">Rooms</a>
       </li>
 	   <li class="nav-item">
         <a class="nav-link" href="{% url 'service_list'%}">Services</a>
@@ -91,9 +47,13 @@
 			Events
 		  </a>
 		  <div class="dropdown-menu">
-			<a class="dropdown-item" href="{% url 'event_list'%}">Upcoming Events</a><hr>
-			<a class="dropdown-item" href="{% url 'event_create'%}">Past Events</a>
+			<a class="dropdown-item" href="{% url 'future_event_list'%}">Upcoming Events</a><hr>
+			<a class="dropdown-item" href="{% url 'past_event_list'%}">Past Events</a>
 		  </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link btn btn-outline-secondary" href="{% url 'login'%}">Accounts</a>
+    </li>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link btn btn-outline-success" href="{% url 'booking_create'%}">Book Now</a>
@@ -101,10 +61,15 @@
     </ul>
   </div>
 </nav>
-<div class='col-md-8'>
+<div class='text-center col-md-12'>
+  {%if user.is_authenticated %}
+  <a href="{% url 'update' %}"><input type="submit" value="Update page"></a>
+  <a href="{% url 'logout' %}"><input type="submit" value="Log Out"></a>
+  {% endif %}
 {% if messages %}
 {% for message in messages %}
 <div class = 'alert alert-{{message.tags}}'>
+  <br><br>
   {{message}}
 </div>
 {% endfor %}
@@ -113,33 +78,37 @@
 {% block content %}
 {% endblock content %}
   <div class='container-fluid'>
-  <diV class="row bg-dark" style="margin-top:50px; padding:20px; color:rgb(255,255,255)">
+  <diV class="row bg-dark text-center footer_row" >
   <diV class='col-md-4'>
-    <h2 >Company Logo</h2>
-    <ul class='list-inline' style="text-decoration:none; font-style: normal;">
-      <li class='list-inline-item'><a href="#">Home.</a></li>
-      <li class='list-inline-item'><a href="#">About.</a></li>
-      <li class='list-inline-item'><a href="#">Contact.</a></li>
-      <h4>Company Name &copy;2018</h4>
+    <h2 >Hotel Jumera</h2>
+    <ul class='list-inline footer_ul' >
+      <li class='list-inline-item'><a href="{% url 'gallery_list'%}">Home.</a></li>
+      <li class='list-inline-item'><a href="{% url 'about_detail'%}">About.</a></li>
+      <li class='list-inline-item'><a href="{% url 'contact_us'%}">Contact.</a></li>
+      <li class='list-inline-item'><a href="#">Go Up</a></li>
+      <h4> &copy;2018. All Rights Reserved.</h4>
     </ul>
     </div>
+    <div class='col-md-4'>
+      <h4><strong> About the Hotel</strong></h4>
+      <p> Guests are god! </p>
+        <p>You can Enjoy your time in the serene environment.</p>
+
+    </div>
+
   <div class='col-md-4'>
-    <p><i class="fa fa-map-marker">  </i>  Daduwa-07, <strong>  Chitwan, Nepal</strong>
-      <p><i class="fa fa-phone">  </i>   +977- 056583477</p>
-      <p><i class="fa fa-envelope">  </i>   company@gmail.com</p>
-  </div>
-  <div class='col-md-4'>
-    <h4><strong> About the company</strong></h4>
-    <p> This is the place for you if you are wanting to spend some time on serene environment.</p>
-      <p>you are welcome</p>
-      <ul class="list-inline" style="font-size:30px;">
-        <li class='list-inline-item'><i class="fa fa-facebook-square"></i></li>
-        <li  class='list-inline-item'><i class="fa fa-google-plus-square"></i></li>
-        <li  class='list-inline-item'><i class="fa fa-youtube-square"></i></li>
+    <p><i class="fa fa-map-marker footer_icon_map">  </i>  Daduwa-07, <strong>  Chitwan, Nepal</strong></p>
+      <p><i class="fa fa-phone footer_icon_phone">  </i>   +977- 056583477</p>
+      <p><i class="fa fa-envelope footer_icon_envelope">  </i>   company@gmail.com</p>
+      <ul class="list-inline ">
+        <li class='list-inline-item'><i class="fa fa-facebook-square  footer_icon_facebook"></i></li>
+        <li  class='list-inline-item'><i class="fa fa-google-plus-square  footer_icon_google"></i></li>
+        <li  class='list-inline-item'><i class="fa fa-youtube-square  footer_icon_youtube"></i></li>
       </ul>
   </div>
+
   <div class="col-12 text-center">
-    <hr style="width:100%; background-color:rgba(100,100,100,0.7); margin:auto; display: block;">
+    <hr class="footer_hr">
     <small>  Designed By Bishal G. </small>
   </div>
 </div>

@@ -1,8 +1,10 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import AboutForm
 from .models import About
 
 
+@login_required
 def about_create_form(request):
     about = get_object_or_404(About)
     if request.method=='POST':

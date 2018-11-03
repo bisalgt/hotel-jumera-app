@@ -1,0 +1,12 @@
+{% extends 'gallery/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class='container event_create_container'>
+  <small class="about_create_warning">The Width and Height of Image <strong> MUST </strong>be 1366px-by-768px for efficient view</small>
+<form method='POST' enctype="multipart/form-data">
+{% csrf_token %}
+{{ form |crispy }}
+<button type="submit" class="btn btn-success">Upload Past Event!</button>
+</form>
+</div>
+{% endblock content %}

@@ -2,6 +2,7 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class='container align-center' style = "max-width:100%; height:auto;padding:50px; ">
+  <small style="color:red;background-color:yellow;">The Width and Height of Image <strong> MUST </strong>be 1366px-by-768px for efficient view</small>
 <form method='POST' enctype="multipart/form-data">
 {% csrf_token %}
 {{ form |crispy }}
