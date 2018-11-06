@@ -314,7 +314,13 @@ font-size: 30px;
 .animate_description{font-size: 12px;}
 .animate_button{font-size: 12px;}
 
-
+.colu{max-width:50%;}
+@media only screen and (max-width: 400px){
+  .colu{
+    max-width:100%;
+    padding:20px;margin-bottom: 5px;
+  }
+}
 @media only screen and (max-width: 500px){
 .animate_title{font-size:10px;}
 .animate_description{font-size: 5px;}
