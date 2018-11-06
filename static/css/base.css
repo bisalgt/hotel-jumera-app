@@ -315,15 +315,15 @@ font-size: 30px;
 .animate_button{font-size: 12px;}
 
 .colu{max-width:50%;}
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
   .colu{
     max-width:100%;
     padding:20px;margin-bottom: 5px;
   }
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 768px){
     .colu{
       max-width:50%;
-      
+
     }
 
 
