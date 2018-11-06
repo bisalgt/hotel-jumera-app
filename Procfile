@@ -1,1 +1,1 @@
-web: gunicorn hotel_jumera.wsgi --\log-file -
+web: gunicorn hotel_jumera.wsgi --log-file -
