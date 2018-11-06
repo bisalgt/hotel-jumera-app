@@ -1,6 +1,7 @@
 {% extends 'gallery/base.html' %}
 
 {% block content %}
+<div class="container-fluid">
 <div id="demo" class="carousel slide gallery_list_carousel" data-ride="carousel" >
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -33,13 +34,15 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
-</div><a href="{% url 'contact_us'%}" class="btn btn-outline-success btn-block btn-lg gallery_list_carousel_button">Check Availability!</a>
+</div>
+</div>
+<a href="{% url 'contact_us'%}" class="btn btn-outline-success btn-block btn-lg gallery_list_carousel_button">Check Availability!</a>
 
 <div class=" text-center gallery_list_atithi">अतिथिदेवो भव:</div>
 <div class="container-fluid">
   <div class="row no-gutters gallery_list_row_animate">
     {% for gallery_object in gallery_object_list|slice:"5:6" %}
-    <div class="col-6 image_container" style="padding:5px;">
+    <div class="col-sm-6 image_container" style="padding:5px;">
       <div >
         <img class="img-fluid" src="{{gallery_object.gallery_image.url}}">
           <div class="image_overlay">
@@ -51,7 +54,7 @@
         </div>
       {% endfor %}
       {% for gallery_object in gallery_object_list|slice:"6:7" %}
-      <div class="col-6 image_container" style="padding:5px;">
+      <div class="col-sm-6 image_container" style="padding:5px;">
         <div >
           <img class="img-fluid" src="{{gallery_object.gallery_image.url}}">
             <div class="image_overlay">
@@ -63,7 +66,7 @@
           </div>
         {% endfor %}
         {% for gallery_object in gallery_object_list|slice:"7:8" %}
-        <div class="col-6 image_container" style="padding:5px;">
+        <div class="col-sm-6 image_container" style="padding:5px;">
           <div >
             <img class="img-fluid" src="{{gallery_object.gallery_image.url}}">
               <div class="image_overlay">
@@ -75,7 +78,7 @@
             </div>
           {% endfor %}
           {% for gallery_object in gallery_object_list|slice:"8:9" %}
-          <div class="col-6 image_container" style="padding:5px;">
+          <div class="col-sm-6 image_container" style="padding:5px;">
             <div >
               <img class="img-fluid" src="{{gallery_object.gallery_image.url}}">
                 <div class="image_overlay">

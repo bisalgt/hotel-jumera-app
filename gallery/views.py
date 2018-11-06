@@ -24,3 +24,4 @@ class GalleryUploadsListView(ListView):
     fields = '__all__'
     template_name = 'gallery/gallery_upload_list.html'
     context_object_name = 'gallery_upload_object_list'
+    paginate_by = 9
