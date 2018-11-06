@@ -44,9 +44,9 @@
 
 <div class=" text-center gallery_list_atithi">अतिथिदेवो भव:</div>
 <div class="container-fluid">
-  <div class="row no-gutters gallery_list_row_animate">
+  <div class="row  gallery_list_row_animate">
     {% for gallery_object in gallery_object_list|slice:"5:6" %}
-    <div class="col-sm-6 image_container" style="padding:5px;">
+    <div class="col-xs-6 image_container" style="padding:5px;">
       <div >
         <img class="img-fluid" src="{{gallery_object.gallery_image.url}}">
           <div class="image_overlay">
@@ -58,7 +58,7 @@
         </div>
       {% endfor %}
       {% for gallery_object in gallery_object_list|slice:"6:7" %}
-      <div class="col-sm-6 image_container" style="padding:5px;">
+      <div class="col-xs-6 image_container" style="padding:5px;">
         <div >
           <img class="img-fluid" src="{{gallery_object.gallery_image.url}}">
             <div class="image_overlay">
@@ -70,7 +70,7 @@
           </div>
         {% endfor %}
         {% for gallery_object in gallery_object_list|slice:"7:8" %}
-        <div class="col-sm-6 image_container" style="padding:5px;">
+        <div class="col-xs-6 image_container" style="padding:5px;">
           <div >
             <img class="img-fluid" src="{{gallery_object.gallery_image.url}}">
               <div class="image_overlay">
@@ -82,7 +82,7 @@
             </div>
           {% endfor %}
           {% for gallery_object in gallery_object_list|slice:"8:9" %}
-          <div class="col-sm-6 image_container" style="padding:5px;">
+          <div class="col-xs-6 image_container" style="padding:5px;">
             <div >
               <img class="img-fluid" src="{{gallery_object.gallery_image.url}}">
                 <div class="image_overlay">
