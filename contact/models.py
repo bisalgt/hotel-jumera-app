@@ -6,5 +6,5 @@ class Contact(models.Model):
     phone_number = models.PositiveIntegerField()
     message = models.TextField()
 
-    def __Str__(self):
+    def __str__(self):
         return self.name
