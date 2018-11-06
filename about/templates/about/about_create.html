@@ -2,7 +2,9 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class='container about_create_container' >
-  <small class=" about_create_warning">The Width and Height of Image <strong> MUST </strong>be 1366px-by-768px for efficient view</small>
+  <br>
+  <h3 class="text-center"> Update About Company! </h3>
+  <small class=" text-center about_create_warning">The Width and Height of Image <strong> MUST </strong>be 1366px-by-768px for efficient view</small>
 <form method='post' enctype='multipart/form-data'>
   {% csrf_token %}
   {{form|crispy}}

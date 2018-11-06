@@ -2,13 +2,15 @@
 
 {% block content %}
 <div class='container-fluid' >
+<br>  <h2 class="text-center" style="font-style:italic;">Services We Offer!</h2>
+<hr>
   <div class='row no-gutters service_list_row'>
 {% for service in services %}
 
 <div class='col-md-6 services_container'>
   <img class='img-fluid ' src="{{service.image.url }}" alt="image">
-  <div class='services_content'>
-    <h6>{{ service.title }}</h6>
+  <div class='services_content text-center'>
+    <h4>{{ service.title }}</h4>
     <p>{{service.description}} </p>
   </div>
 </div>

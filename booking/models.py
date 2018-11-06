@@ -5,12 +5,14 @@ from django.urls import reverse
 from rooms.models import RoomDetail
 
 
+def one_day_hence():
+    return timezone.now() + timezone.timedelta(days=1)
 
 class Booking(models.Model):
     name = models.CharField(max_length=100, default='Name Here')
     room = models.ForeignKey(RoomDetail, on_delete=models.CASCADE)
-    check_in = models.DateField(default=timezone.now())
-    check_out = models.DateField(default=timezone.now()+timedelta(days=1))
+    check_in = models.DateField(default=timezone.now)
+    check_out = models.DateField(default=one_day_hence)
     adult = models.PositiveIntegerField(default=2)
     child = models.PositiveIntegerField(default=0)
 

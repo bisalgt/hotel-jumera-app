@@ -2,8 +2,10 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class='container gallery_create_container'>
-  <small class="gallery_create_suggest">The Width and Height of Image <strong> MUST </strong>be 1366px-by-768px for efficient view. </small>
-  <small class="gallery_create_suggest"> <strong> First THREE </strong>images will be shown at slide show, remaining images from 4th to seventh will be shown at the body,The final one will be shown at the navigation bar </small>
+  <br>
+  <h3 class="text-center"> Upload Images to Home page  </h3>
+  <small class="text-center gallery_create_suggest">The Width and Height of Image <strong> MUST </strong>be 1366px-by-768px for efficient view. </small>
+  <small class="text-center gallery_create_suggest"> <strong> First  </strong>image will be shown at navigation menu so put a logo, remaining FOUR images from 4th to seventh will be shown at the body with link and animation,The final one / 8th  will be shown at the Bottom of home page! </small>
 <form method='POST' enctype="multipart/form-data">
 {% csrf_token %}
 {{ form |crispy }}

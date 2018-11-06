@@ -1,7 +1,12 @@
 {% extends 'gallery/base.html'%}
 {% block content %}
 <div class="container-fluid">
+
+  <br>  <h2 class="text-center" style="font-style:italic;"> Photo Gallery!</h2> <hr>
+
+
 <div class="row gallery_upload_list_row">
+
 {% for image in gallery_upload_object_list%}
     <div class="col-sm-4 gallery_upload_list_col">
       <div class="img-thumbnail">

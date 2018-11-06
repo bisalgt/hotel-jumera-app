@@ -13,11 +13,11 @@
   <link href="{% static 'css/base.css' %}" rel="stylesheet">
   </head>
 <body class="body_color">
-    {% for gallery_object in gallery_object_list|slice:"7:8" %}
+    {% for gallery_object in gallery_object_list|slice:"0:1" %}
     <a  href="{% url 'gallery_list'%}"><img class='nav_image'  src="{{ gallery_object.gallery_image.url }}" alt="{{ gallery_object.gallery_image_title }}"></a>
     <p class='text-right nav_text' >अतिथिदेवो भव:</p>
   {% endfor %}
-<nav class="navbar  nav_style navbar-expand-md nav_color navbar-light">
+<nav class="navbar  nav_style navbar-expand-md nav_color bg-success navbar-light">
 <a class="navbar-brand" href="{% url 'gallery_list'%}"> Hotel Jumera</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -52,11 +52,11 @@
 		  </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link btn btn-outline-secondary" href="{% url 'login'%}">Accounts</a>
+      <a class="nav-link btn btn-outline-warning" href="{% url 'login'%}">Accounts</a>
     </li>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link btn btn-outline-success" href="{% url 'booking_create'%}">Book Now</a>
+			<a class="nav-link btn btn-outline-info" href="{% url 'booking_create'%}">Book Now</a>
 		</li>
     </ul>
   </div>
@@ -78,13 +78,13 @@
 {% block content %}
 {% endblock content %}
   <div class='container-fluid'>
-  <diV class="row bg-dark text-center footer_row" >
+  <diV class="row text-center footer_row" >
   <diV class='col-md-4'>
     <h2 >Hotel Jumera</h2>
-    <ul class='list-inline footer_ul' >
+    <ul class='list-inline footer_ul >
       <li class='list-inline-item'><a href="{% url 'gallery_list'%}">Home.</a></li>
-      <li class='list-inline-item'><a href="{% url 'about_detail'%}">About.</a></li>
-      <li class='list-inline-item'><a href="{% url 'contact_us'%}">Contact.</a></li>
+      <li class='list-inline-item'><a href="{% url 'about_detail'%}">About Us.</a></li>
+      <li class='list-inline-item'><a href="{% url 'contact_us'%}">Contact Us.</a></li>
       <li class='list-inline-item'><a href="#">Go Up</a></li>
       <h4> &copy;2018. All Rights Reserved.</h4>
     </ul>

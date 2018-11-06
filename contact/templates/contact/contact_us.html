@@ -1,9 +1,11 @@
 {% extends 'gallery/base.html'%}
 {% load crispy_forms_tags %}
 {% block content%}
-{% for obj in gallery_obj|slice:"1:2"%}
-<div class="contact_us_container" style="background-image:url('{{obj.gallery_image.url}}');">
+{% for obj in gallery_obj|slice:"8:9"%}
+<div class="contact_us_container" style="background-attachment:fixed;color:white;background-image:url('{{obj.gallery_image.url}}');">
 <div class="contact_us_contain">
+  <h3 class="text-center">Contact Details! </h3>
+
 <form method='post'>
   {% csrf_token %}
   {{form | crispy }}

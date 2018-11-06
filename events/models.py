@@ -5,7 +5,7 @@ from PIL import Image
 class PastEvent(models.Model):
     title = models.CharField(max_length=200, default='Title')
     image = models.ImageField(upload_to='event_pics')
-    time = models.DateTimeField(default=timezone.now())
+    time = models.DateTimeField(default=timezone.now)
     description = models.TextField()
 
     class Meta:
@@ -26,7 +26,7 @@ class PastEvent(models.Model):
 class FutureEvent(models.Model):
     title = models.CharField(max_length=200, default='Title')
     image = models.ImageField(upload_to='event_pics')
-    time = models.DateTimeField(default=timezone.now())
+    time = models.DateTimeField(default=timezone.now)
     description = models.TextField()
 
     class Meta:

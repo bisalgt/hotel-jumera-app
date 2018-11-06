@@ -16,13 +16,14 @@
 <p><strong> Time :</strong> <small>{{event.time}}</small></p>
 <p>{{event.description}}</p>
 {%if user.is_authenticated %}
-<a href="{% url 'future_event_delete' event.id %}"><input type="submit" value="Delete Event"></a>
+<a href="{% url 'future_event_delete' event.id %}"><button type="submit" class="btn btn-danger">Delete Event!</button></a>
 {% endif %}
 </div>
 </div>
 {% endfor %}
 {% else %}
 <h3>Sorry!No  Upcoming Events </h3>
+<br><br><br><br><br><br><br><br><br>
 {%endif %}
 </div>
 

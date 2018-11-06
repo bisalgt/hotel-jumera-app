@@ -2,6 +2,7 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class='container service_create_container'>
+  <h4 class="text-center">Add New Service! </h4>
   <small class="about_create_warning">The Width and Height of Image <strong> MUST </strong>be 1366px-by-768px for efficient view</small>
 <form method='post' enctype='multipart/form-data'>
   {% csrf_token %}

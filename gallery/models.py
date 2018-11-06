@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from PIL import Image
+from django.utils import timezone
 
 
 class Gallery(models.Model):
@@ -25,7 +26,10 @@ class Gallery(models.Model):
 class GalleryUploads(models.Model):
     upload_image_title = models.CharField(max_length=200)
     upload_image = models.ImageField(upload_to='gallery_upload_pics')
+    upload_date = models.DateField(default=timezone.now)
 
+    class Meta:
+        ordering = ['-upload_date']
     def __str__(self):
         return self.upload_image_title
 

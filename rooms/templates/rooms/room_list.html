@@ -2,11 +2,13 @@
 
 {% block content %}
 <div class='container-fluid'>
+  <br>  <h2 class="text-center" style="font-style:italic;">Rooms!</h2>
+  <hr class="text-center" style="width:27%;"><br>
 {% for room in room_list %}
 <div class='row no-gutters room_list_row' >
 <div class='col-lg-4'>
   <div class='img-thumbnail room_list_img'>
-  <img class='img-fluid' src="{{room.room_image.url }}" alt="image">
+  <a href="{{room.room_image.url }}"><img class='img-fluid' src="{{room.room_image.url }}" alt="image"></a>
 </div>
 </div>
 <div class='col-lg-8 room_list_col'>
@@ -15,16 +17,16 @@
 <p>{{room.room_about}}</p>
 <div class='row'>
   <div class='col-lg-4'>
-<p><i class="fa fa-bed room_list_icon"></i> :  <span class='badge badge-secondary'> {{room.room_bedroom}} Bed</span></p>
-<p> <i class="fa fa-television room_list_icon"></i> :   <span class='badge badge-secondary'>{{ room.room_tv }}</span></p>
+<p><i class="fa fa-bed room_list_icon"></i> :  <span class='badge badge-success'> {{room.room_bedroom}} Bed</span></p>
+<p> <i class="fa fa-television room_list_icon"></i> :   <span class='badge badge-success'>{{ room.room_tv }}</span></p>
 </div>
 <div class='col-lg-4'>
-  <p><i class="fa fa-wifi room_list_icon"></i>  :  <span class='badge badge-secondary'>  {{room.room_wifi}}</span></p>
-  <p> A/C :  <span class='badge badge-secondary'>{{ room.room_ac }}</span></p>
+  <p><i class="fa fa-wifi room_list_icon"></i>  :  <span class='badge badge-success'>  {{room.room_wifi}}</span></p>
+  <p> A/C :  <span class='badge badge-success'>{{ room.room_ac }}</span></p>
 </div>
 <div class='col-lg-4'>
-  <p> WARDROBE :  <span class='badge badge-secondary'> AVAILABLE </span></p>
-  <p> RESTROOM :  <span class='badge badge-secondary'>{{ room.room_bathroom }}</span></p>
+  <p> WARDROBE :  <span class='badge badge-success'> AVAILABLE </span></p>
+  <p> RESTROOM :  <span class='badge badge-success'>{{ room.room_bathroom }}</span></p>
 </div>
 </div>
 </div>
