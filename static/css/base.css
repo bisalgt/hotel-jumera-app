@@ -132,6 +132,7 @@ background-color:yellow;
   right:0px;
   margin:10px;
 }
+
 .event_list_container{
   margin:30px 5px 30px 5px;
   border:1px solid rgba(150,150,150,0.3);
@@ -314,7 +315,19 @@ font-size: 30px;
 .animate_description{font-size: 12px;}
 .animate_button{font-size: 15px;}
 
-.colu{max-width:50%;}
+.input{
+  width=50%;
+}
+
+
+@media only screen and (min-width: 400px) {
+  .text input {
+      background-color: red;
+      width:30%;
+  }
+}
+
+
 @media only screen and (max-width: 768px){
   .colu{
     max-width:100%;
