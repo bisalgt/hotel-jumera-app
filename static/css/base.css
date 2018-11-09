@@ -310,9 +310,9 @@ font-size: 30px;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.animate_title{font-size:20px;}
+.animate_title{font-size:25px;}
 .animate_description{font-size: 12px;}
-.animate_button{font-size: 12px;}
+.animate_button{font-size: 15px;}
 
 .colu{max-width:50%;}
 @media only screen and (max-width: 768px){
@@ -328,8 +328,14 @@ font-size: 30px;
 
 
 }
-@media only screen and (max-width: 500px){
+@media screen and (min-width: 1200px){
 .animate_title{font-size:10px;}
 .animate_description{font-size: 5px;}
 .animate_button{font-size: 7px;}
+}
+@media screen and (min-width:1200px){
+  .show_contact_form{
+    display:block;
+
+  }
 }
